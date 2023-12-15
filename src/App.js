@@ -50,7 +50,6 @@ function App() {
         }
     }, [windowSize]);
 
-    console.log(isMobile);
     return (
         <Router>
             <div className="App content mx-auto max-w-[1110px] w-full px-6">
