@@ -14,6 +14,7 @@ import Profile from './Pages/Profile';
 import EditUSer from './Pages/EditUser';
 import Search from './Pages/Search';
 import Desktop from './Components/LandingPageDesktop/Desktop';
+import { useEffect, useState } from 'react';
 
 function App() {
     const user = useSelector((state) => state.auth.login?.currentUser);
@@ -48,6 +49,8 @@ function App() {
             setMobile(true);
         }
     }, [windowSize]);
+
+    console.log(isMobile);
     return (
         <Router>
             <div className="App content mx-auto max-w-[1110px] w-full px-6">
