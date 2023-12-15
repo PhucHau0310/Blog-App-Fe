@@ -98,7 +98,7 @@ function App() {
                             />
                         </>
                     ) : (
-                        <Route path="/desktop" element={<Desktop />} />
+                        <Route path="/" element={<Desktop />} />
                     )}
                 </Routes>
             </div>
