@@ -45,7 +45,7 @@ const PostList = (props) => {
     };
     return (
         <div onClick={onClick}>
-            <div className={`blog-item ${postDetail && 'blog-item-comment'}`}>
+            <div className="blog-item">
                 <img
                     // src={`http://localhost:9090/v1/uploads/post/${image}`}
                     src={`${url}/v1/uploads/post/${image}`}
