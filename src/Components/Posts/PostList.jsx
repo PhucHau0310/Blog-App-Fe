@@ -7,17 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const url = 'https://blog-app-v2-6458.onrender.com';
 
 const PostList = (props) => {
-    const {
-        id,
-        date,
-        title,
-        description,
-        image,
-        nameUser,
-        authorID,
-        onClick,
-        postDetail,
-    } = props;
+    const { id, date, title, description, image, nameUser, authorID } = props;
     const user = useSelector((state) => state.auth.login?.currentUser);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -44,7 +34,7 @@ const PostList = (props) => {
         );
     };
     return (
-        <div onClick={onClick}>
+        <div>
             <div className="blog-item">
                 <img
                     // src={`http://localhost:9090/v1/uploads/post/${image}`}
