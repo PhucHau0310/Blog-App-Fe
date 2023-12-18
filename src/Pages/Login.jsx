@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { userLogin } from '../Redux/apiRequest';
 
 const Login = () => {
@@ -9,6 +9,8 @@ const Login = () => {
     const [hiddenPass, setHiddenPass] = useState(true);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const loginLoading = useSelector((state) => state.auth.login?.isLoading);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -93,6 +95,12 @@ const Login = () => {
                     </svg>
                 </div>
             </form>
+
+            {loginLoading && (
+                <>
+                    <p style={{ textAlign: 'center' }}>Loading...</p>
+                </>
+            )}
         </div>
     );
 };
